@@ -9,6 +9,7 @@
 </head>
 <body>
     <?php
+    // Define the dropdown menu items
     $menuItems = [
         ["name" => "Action", "link" => "forums/appointment.php"],
         ["name" => "Another action", "link" => "forums/events.php"],
@@ -16,6 +17,7 @@
     ];
     ?>
 
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg" style="background-color: rgb(18, 136, 221);">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -59,6 +61,7 @@
             </div>
         </div>
     </nav>
+    <!-- End Of Navigation -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
