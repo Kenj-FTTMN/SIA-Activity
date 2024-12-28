@@ -10,14 +10,6 @@
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
-    <?php
-    // Define the dropdown menu items
-    $menuItems = [
-        ["name" => "Appointment", "link" => "forms/appointment.php"],
-        ["name" => "Forum", "link" => "forms/forum.php"],
-    ];
-    ?>
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg" style="background-color: rgb(18, 136, 221);">
         <div class="container-fluid">
