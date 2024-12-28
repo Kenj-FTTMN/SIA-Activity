@@ -6,14 +6,15 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
     <?php
     // Define the dropdown menu items
     $menuItems = [
-        ["name" => "Action", "link" => "forums/appointment.php"],
-        ["name" => "Another action", "link" => "forums/events.php"],
-        ["name" => "Something else here", "link" => "forums/forum.php"],
+        ["name" => "Appointment", "link" => "forms/appointment.php"],
+        ["name" => "Forum", "link" => "forms/forum.php"],
     ];
     ?>
 
@@ -32,26 +33,27 @@
                         <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Link</a>
+                        <a class="nav-link text-white" href="events.php">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="info.php">Info</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
+                            Forms
                         </a>
                         <ul class="dropdown-menu">
-                            <?php foreach ($menuItems as $item): ?>
-                                <li>
-                                    <a class="dropdown-item" href="<?= $item['link'] ?>"><?= $item['name'] ?></a>
-                                </li>
-                            <?php endforeach; ?>
-                            <li><hr class="dropdown-divider"></li>
                             <li>
-                                <a class="dropdown-item" href="forums/special.php">Special Item</a>
+                                <a href="index.php?page=appointment" class="dropdown-item <?php echo ($_GET['page'] ?? '') === 'appointment' ? 'active' : ''; ?>">
+                                    <i class="bi bi-circle"></i><span>Appointment Form</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="index.php?page=forum" class="dropdown-item <?php echo ($_GET['page'] ?? '') === 'forum' ? 'active' : ''; ?>">
+                                    <i class="bi bi-circle"></i><span>Forum</span>
+                                </a>
                             </li>
                         </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled text-light" aria-disabled="true">Disabled</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -62,6 +64,36 @@
         </div>
     </nav>
     <!-- End Of Navigation -->
+
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <?php
+                        // Check for the page parameter
+                        if (isset($_GET['page'])) {
+                            $page = $_GET['page'];
+                            switch ($page) {
+                                case 'appointment':
+                                    include 'forms/appointment.php';
+                                    break;
+                                    case 'forum':
+                                        include 'forms/forum.php';
+                                        break;
+                                default:
+                                    echo '<p>Page not found.</p>';
+                                    break;
+                            }
+                        } else {
+                            echo '<p>Welcome to the home page!</p>';
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
