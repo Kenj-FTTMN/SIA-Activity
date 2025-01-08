@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art & History Museum</title>
+    <title>Barangay Officials</title>
     <style>
-        /* General Reset */
         * {
             margin: 0;
             padding: 0;
@@ -18,138 +17,146 @@
             padding: 20px;
         }
 
-        /* Container */
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
-        /* Header */
         .header {
             text-align: center;
-            background-color:rgb(153,153,255);
+            background-color: rgb(153, 153, 255);
             padding: 20px;
             margin-bottom: 30px;
-            position: relative;
-            border-radius: 50px;
+            border-radius: 20px;
         }
 
         .header h1 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: bold;
         }
 
-        .header p {
-            font-size: 1.2rem;
-            font-style: italic;
-            margin-top: 5px;
+        .top {
+            text-align: center;
+            margin-bottom: 30px;
         }
 
-        /* Section */
-        .content .card {
-            background: rgb(192,223,255);
+        .top .card {
+            display: inline-block;
+            background: rgb(192, 223, 255);
             border: 1px solid #ddd;
-            padding: 20px;
-            margin-bottom: 20px;
-            position: relative;
-            text-align: center;
-            border-radius: 30px;
+            border-radius: 10px;
+            padding: 15px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .content .card h2 {
-            font-size: 1.5rem;
+        .top .card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 2px solid #ccc;
             margin-bottom: 10px;
+        }
+
+        .top .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
             font-weight: bold;
         }
 
-        .content .card p {
-            font-size: 1rem;
-            color: #666;
-            margin-bottom: 15px;
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
         }
 
-        .content .card img {
-            max-width: 100%;
+        .grid .card {
+            background: rgb(192, 223, 255);
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .grid .card img {
+            display: block;
+            margin: 0 auto; 
+            width: 100%;
+            max-width: 120px;
             height: auto;
-            border-radius: 5px;
-            border: 1px solid #ccc;
+            border-radius: 50%;
+            border: 2px solid #ccc;
+            margin-bottom: 10px;
         }
 
-        /* Decorative Pins */
-        .card::before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 15px;
-            height: 15px;
-            background-color:rgb(96,176,192);
-            border-radius: 50%;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        .grid .card h2 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .grid .card p {
+            font-size: 1rem;
+            color: #333;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header class="header">
-            <h1>History</h1>
+            <h1>Barangay Officials</h1>
         </header>
-        <section class="content">
+        
+        <section class="top">
             <div class="card">
-                <h2>Art gallery</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis risus felis.</p>
-                <img src="assets/images/art_gallery.jpg" alt="Art gallery">
+                <img src="assets/images/officer1.jpg" alt="Punong Barangay">
+                <h2>Punong Barangay</h2>
+                <p>Julito Ogsimer</p>
+            </div>
+        </section>
+        
+        <section class="grid">
+            <div class="card">
+                <img src="assets/images/officer2.jpg" alt="Kagawad">
+                <h2>Kagawad</h2>
+                <p>Laurence Dagoc</p>
             </div>
             <div class="card">
-                <h2>Art history</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis risus felis.</p>
-                <img src="assets/images/art_history.jpg" alt="Art history">
+                <img src="assets/images/officer3.jpg" alt="Kagawad">
+                <h2>Kagawad</h2>
+                <p>Mark Anthony Bustamante</p>
             </div>
             <div class="card">
-                <h2>Classic Art</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis risus felis.</p>
-                <img src="assets/images/classic_art.jpg" alt="Classic Art">
+                <img src="assets/images/officer4.jpg" alt="Kagawad">
+                <h2>Kagawad</h2>
+                <p>Asperino Baconga</p>
             </div>
             <div class="card">
-                <h2>The museum</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis risus felis.</p>
-                <img src="assets/images/museum.jpg" alt="The museum">
+                <img src="assets/images/officer5.jpg" alt="Kagawad">
+                <h2>Kagawad</h2>
+                <p>Kenneth Ray E. Lao</p>
+            </div>
+            <div class="card">
+                <img src="assets/images/officer6.jpg" alt="Kagawad">
+                <h2>Kagawad</h2>
+                <p>Celbon Dena</p>
+            </div>
+            <div class="card">
+                <img src="assets/images/officer7.jpg" alt="Kagawad">
+                <h2>Kagawad</h2>
+                <p>Rowena Raye Mediana</p>
+            </div>
+            <div class="card">
+                <img src="assets/images/officer8.jpg" alt="Kagawad">
+                <h2>Kagawad</h2>
+                <p>Shiva Mae Jandayan</p>
+            </div>
+            <div class="card">
+                <img src="assets/images/officer9.jpg" alt="SK Chairman">
+                <h2>SK Chairman</h2>
+                <p>Mark Malacat</p>
             </div>
         </section>
     </div>
 </body>
 </html>
-<br>
-<br>
-<br>
-
-<div class="photo-gallery mt-4 text-center">
-    <h2>Get to know our officers</h2>
-    <div class="row justify-content-center align-items-center">
-        <div class="col-md-4">
-            <img src="assets/images/photo7.webp" class="img-fluid rounded shadow fixed-size">
-        </div>
-    </div>
-</div>
-
-<style>
-    .fixed-size {
-        width: 5000px; 
-        height: 1000px; 
-        object-fit: cover; 
-    }
-
-    .photo-gallery {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .row {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-</style>
