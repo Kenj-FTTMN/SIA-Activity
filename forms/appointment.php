@@ -24,7 +24,7 @@
         <input type="text" name = "address" class="form-control" id="inputAddress" placeholder="1234 Main St">
       </div>
       <div class="col-12">
-        <label for="selectForm" class="form-label">Appointment Forms</label>
+        <label for="selectForm" class="form-label">Appointment</label>
           <select class="form-select" name="forms" id="selectForm" aria-label="Appointment">
             <option selected>Baranggay ID</option>
             <option value="1">Baranggay Clearance</option>
